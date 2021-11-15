@@ -1,0 +1,226 @@
+@font-face {
+  font-family: 'Traveling_Typewriter';
+  src:  url('traveling-typewriter.regular (1).ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Indiana Jonas';
+  src:  url('Indiana-Jonas-48ip.otf') format('truetype');
+}
+//-------------------------------//  
+//---------CSS for Index---------//
+//-------------------------------//
+body{
+  background:black;
+  background-size: 100vh;
+}
+main {
+  display: flex;
+  justify-content: center;
+  flex-direction: column; 
+}
+.startbutton {
+  margin-top: 100px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: 'Indiana Jonas';
+  font-size: 2rem;
+  transform:rotate(-10deg);
+  background: #FFFFFF;
+  background: -webkit-linear-gradient(to top, #FFFFFF 18%, #FFFF24 38%, #FF662E 61%);
+  background: -moz-linear-gradient(to top, #FFFFFF 18%, #FFFF24 38%, #FF662E 61%);
+  background: linear-gradient(to top, #FFFFFF 18%, #FFFF24 38%, #FF662E 61%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+//-----------------------------------//
+//-------------------Flame-----------//
+//-----------------------------------//
+.fire{
+  margin: 100px;
+  width: 60px;
+  height: 60px;
+  position: relative;
+  transform-origin:center bottom;
+  animation-name: flicker;
+  animation-duration:3ms;
+  animation-delay:200ms;
+  animation-timing-function: ease-in;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+.flame{
+  bottom:0;
+  position: absolute;
+  border-bottom-right-radius: 50%;
+  border-bottom-left-radius: 50%;
+  border-top-left-radius: 50%;
+  transform:rotate(-45deg) scale(1.5,1.5);
+}
+.yellow{
+  left:15px; 
+  width: 30px;
+  height: 30px;
+  background:gold;
+  box-shadow: 0px 0px 9px 4px gold;
+}
+.orange{
+  left:10px; 
+  width: 40px;
+  height: 40px;
+  background:orange;
+  box-shadow: 0px 0px 9px 4px orange;
+}
+.red{
+  left:5px;
+  width: 50px;
+  height: 50px;
+  background:OrangeRed;
+  box-shadow: 0px 0px 5px 4px OrangeRed;
+}
+.white{
+  left:15px; 
+  bottom:-4px;
+  width: 30px;
+  height: 30px;
+  background:white;
+  box-shadow: 0px 0px 9px 4px white;
+}
+.circle{
+  border-radius: 50%;
+  position:absolute;  
+}
+.blue{
+  width: 10px;
+  height: 10px;
+  left:25px;
+  bottom:-25px; 
+  background: SlateBlue;
+  box-shadow: 0px 0px 15px 10px SlateBlue;
+}
+.black{
+  width: 40px;
+  height: 40px;
+  left:10px;
+  bottom:-60px;  
+  background: black;
+  box-shadow: 0px 0px 15px 10px black;
+}
+@keyframes flicker{
+  0%   {transform: rotate(-1deg);}
+  20%  {transform: rotate(1deg);}
+  40%  {transform: rotate(-1deg);}
+  60%  {transform: rotate(1deg) scaleY(1.04);}
+  80%  {transform: rotate(-2deg) scaleY(0.92);}
+  100% {transform: rotate(1deg);}
+}
+//--------------------------------------------
+//-------------------CSS For About------------
+//--------------------------------------------
+.babout {
+  font-family: 'Traveling_Typewriter';
+  letter-spacing: 3px;
+  background: url(../img/fil_arkiv.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  background-position: center 7%;
+}
+.aboutme {
+  margin-top: 150px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+   /* The typing effect */
+  .typewriter{
+    color: rgb(0, 0, 0);
+    font-family: 'Traveling_Typewriter';
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em ; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+    animation: 
+      typing 3.5s steps(30, end),
+      blink-caret .5s step-end infinite;
+  }
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  
+  }
+nav {
+    display: flex;
+    justify-content: space-evenly;
+  a {
+    text-decoration: none;
+    color: black;
+  }
+  a::before {
+    content: url(../img/torch.png);
+  }
+  a:hover {
+    color: red; 
+  }
+  }
+}
+//--------------------------------------------
+//-------------------CSS For Contact----------
+//--------------------------------------------
+.bcontact {
+  background: url(../img/indie2.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  background-position: center;
+ h1 {
+   font-family: 'Traveling_Typewriter';
+   display: flex;
+   justify-content: center;
+   text-transform: uppercase;
+  font-size: 3rem;
+ }
+  address {
+  margin-top: 50px;
+  display: flex;
+  justify-content:space-around;
+  a{
+      font-size: 1rem;
+      width: 50px;
+      height: 100px;
+  }
+  .fa-envelope{
+  color: black;
+  }
+  .fa-mobile-alt{
+  color: black;
+  }
+  .fa-facebook-square{
+  color: rgb(66, 103, 178);
+  
+  }
+  .fa-linkedin {
+  color: rgb(14, 118, 168);
+  }
+}
+  .contactnav {
+    font-family: 'Traveling_Typewriter';
+    display: flex;
+    justify-content: center;
+    align-items: baseline;   
+  a {
+    text-decoration: none;
+    color: black;
+  }
+  a::before {
+    content: url(../img/torch.png);
+  }
+  a:hover {
+    color: red;
+  }
+  a::after {
+    content: url(../img/torch.png);
+transform: rotate(-180deg);
+    }
+  }
+}

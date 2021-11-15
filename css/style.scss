@@ -1,0 +1,15 @@
+@import 'normalize';
+
+@import 'base';
+
+@media screen and (min-width :1024px){
+
+  @import 'desktop';
+}
+
+main {
+  outline: 1 solid black;
+  max-width: 320px;
+  margin: 0 auto;
+}
+
